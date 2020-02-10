@@ -20,6 +20,7 @@
   },
   "homepage": "https://github.com/1000miles/typescript-stats-app#readme",
   "dependencies": {
+    "@types/node": "^13.7.0",
     "concurrently": "^5.1.0",
     "nodemon": "^2.0.2"
   }

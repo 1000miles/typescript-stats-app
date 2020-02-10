@@ -10,15 +10,19 @@ const matches = fs
     // Split each row at ',' and return
     return row.split(',');
   });
+console.log(matches);
 
-// console.log(matches);
+const homeWin = 'H';
+const awayWin = 'A';
+const draw = 'D';
 
 let manUnitedWins = 0;
 
 for (let match of matches) {
-  if (match[1] === 'Man United' && match[5] === 'H') {
+  // If name is `Man United` and homewin === 'H
+  if (match[1] === 'Man United' && match[5] === homeWin) {
     manUnitedWins++;
-  } else if (match[2] === 'Man United' && match[5] === 'A') {
+  } else if (match[2] === 'Man United' && match[5] === awayWin) {
     manUnitedWins++;
   }
 }

@@ -32,12 +32,6 @@ enum MatchResult {
   Draw = 'D'
 }
 
-// Way 1:
-// MatchResult.AwayWin
-// MatchResult.HomeWin
-// MatchResult.Draw
-
-// Way 2 to get MatchResult data
 // const printMatchResult = (): MatchResult => {
 //   if (match[5] === 'H') {
 //     return MatchResult.HomeWin;
@@ -45,6 +39,10 @@ enum MatchResult {
 
 //   return MatchResult.AwayWin;
 // }
+
+// MatchResult.AwayWin === 'A';
+// MatchResult.HomeWin === 'H';
+// MatchResult.Draw === 'D';
 
 let manUnitedWins = 0;
 

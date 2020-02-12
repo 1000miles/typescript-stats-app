@@ -12,3 +12,7 @@
 4. Tuples
   - when using a tuple to represent object values the order is important.
   - Define a new type as a tuple (structure).
+5. Abstract Classes
+  - TypeScript allows to define abstract classes using the keyword `abstract` for mainly inheritancee where other classes may derive from.
+  - Instance classes can not be created from abstract classes.
+  - An abstract class typically includes one or more abstract methods or property declarations. A class that extends another abstract class must define all abstract methods.

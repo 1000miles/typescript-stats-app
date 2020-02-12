@@ -4,7 +4,6 @@ var __importDefault = (this && this.__importDefault) || function (mod) {
 };
 Object.defineProperty(exports, "__esModule", { value: true });
 var fs_1 = __importDefault(require("fs"));
-var utils_1 = require("./utils");
 var CsvFileReader = /** @class */ (function () {
     function CsvFileReader(filename) {
         this.filename = filename;
@@ -28,21 +27,6 @@ var CsvFileReader = /** @class */ (function () {
             // Map through row of strings from football.csv
             // Return an array with Date, string, number or enum MatchResult
             .map(this.mapRow); // Just passing function name, no function invokation
-    };
-    // Helper
-    CsvFileReader.prototype.mapRow = function (row) {
-        return [
-            // Take the first element of each row and return
-            utils_1.dateStringToDate(row[0]),
-            row[1],
-            row[2],
-            parseInt(row[3]),
-            parseInt(row[4]),
-            // Convert string into matchable enum
-            // MatchResult => Overwrite with Type Assertion
-            row[5],
-            row[6]
-        ];
     };
     return CsvFileReader;
 }());

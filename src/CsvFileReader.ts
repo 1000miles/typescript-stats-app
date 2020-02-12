@@ -21,7 +21,7 @@ export class CsvFileReader {
   constructor(public filename: string) {};
 
   read(): void {
-    console.log(this.data);
+    //console.log(this.data);
     this.data = fs
       .readFileSync(this.filename, {
         encoding: 'utf-8'

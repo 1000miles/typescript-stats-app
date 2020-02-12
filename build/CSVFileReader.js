@@ -14,7 +14,7 @@ var CsvFileReader = /** @class */ (function () {
     }
     ;
     CsvFileReader.prototype.read = function () {
-        console.log(this.data);
+        //console.log(this.data);
         this.data = fs_1.default
             .readFileSync(this.filename, {
             encoding: 'utf-8'

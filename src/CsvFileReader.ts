@@ -1,4 +1,5 @@
 import fs from "fs";
+import { dateStringToDate } from './utils';
 
 export class CsvFileReader {
   // Initiliaze data as two dimensional data of strings
@@ -7,6 +8,7 @@ export class CsvFileReader {
   constructor(public filename: string) {};
 
   read(): void {
+    console.log(this.data);
     this.data = fs
       .readFileSync(this.filename, {
         encoding: 'utf-8'
@@ -16,6 +18,17 @@ export class CsvFileReader {
       .map((row: string): string[] => {
         // Split each row at ',' and return
         return row.split(',');
-      });
+      })
+      .map((row: string[]): any => {
+        return [
+          // Take the first element of each row and return
+          dateStringToDate(row[0]), // Example: 2018-08-09T22:00:00.000Z
+          row[1], // Example: 'Man United'
+          row[2], // Example: 'Leicester'
+          parseInt(row[3]), // Example: '2'
+          parseInt(row[4]) // Example: '1'
+          // Convert string into matchable enum
+        ]
+      })
   }
 }

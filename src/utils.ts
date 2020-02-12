@@ -1,3 +1,4 @@
+// Get data strings and return a date
 export const dateStringToDate = (dateString: string): Date => {
   // Input from football.csv: 28/10/2018
   const dateParts = dateString

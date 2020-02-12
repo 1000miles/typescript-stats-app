@@ -1,9 +1,11 @@
 "use strict";
 Object.defineProperty(exports, "__esModule", { value: true });
+// Get data strings and return a date
 exports.dateStringToDate = function (dateString) {
-    // 28/10/2018
+    // Input from football.csv: 28/10/2018
     var dateParts = dateString
-        .split('/')
+        .split('/') // ['28', '10', '2018']
+        // Map through arrray of date strings and return a number
         .map(function (value) {
         // Convert value (string) into integers and return
         return parseInt(value);

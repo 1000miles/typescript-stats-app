@@ -1,7 +1,8 @@
 export const dateStringToDate = (dateString: string): Date => {
-  // 28/10/2018
+  // Input from football.csv: 28/10/2018
   const dateParts = dateString
-    .split('/')
+    .split('/') // ['28', '10', '2018']
+    // Map through arrray of date strings and return a number
     .map((value: string): number => {
       // Convert value (string) into integers and return
       return parseInt(value);

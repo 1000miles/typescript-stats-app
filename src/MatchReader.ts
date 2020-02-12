@@ -1,8 +1,8 @@
-import { CsvFileReader } from './CSVFileReader';
+import { CsvFileReader } from './CsvFileReader';
 import { dateStringToDate } from './utils';
-import { MatchResult } from './MatchResult';
+//import { MatchResult } from './MatchResult';
 
-export class MatchReader extends CsvFileReader {
+export class MatchReader extends CsvFileReader<T>{
   mapRow(row: string[]): MatchData {
     return [
       // Take the first element of each row and return

@@ -12,15 +12,15 @@ type MatchData = [
   string
 ]
 
-export abstract class CsvFileReader {
+export abstract class CsvFileReader<T> {
   // Initiliaze data as two dimensional data of strings
   // Note: We only use 1x brackets as MatchData[] here since Tuple MatchData is already an array
-  data: MatchData[] = [];
+  data: T[] = [];
 
   constructor(public filename: string) {};
 
   // Helper
-  abstract mapRow(row: string[]): MatchData;
+  abstract mapRow(row: string[]): T;
 
   read(): void {
     console.log(this.data);

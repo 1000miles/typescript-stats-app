@@ -16,3 +16,7 @@
   - TypeScript allows to define abstract classes using the keyword `abstract` for mainly inheritancee where other classes may derive from.
   - Instance classes can not be created from abstract classes.
   - An abstract class typically includes one or more abstract methods or property declarations. A class that extends another abstract class must define all abstract methods.
+6. Generics
+  - Like function arguments, but for types in class/function definitions.
+  - Aallows us to ddefine the type of a property/argument/return value at a future point.
+  - Used heavily when writing reusable code.

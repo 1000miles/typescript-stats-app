@@ -9,3 +9,6 @@
   - creates an object with the same keys and values when convete from TS to JS.
   - primary goal is to signal other engineers that these are all closely related values.
   - use whenever we have a small fixe set of values that are all closely related and known at compile time.
+4. Tuples
+  - when using a tuple to represent object values the order is important.
+  - Define a new type as a tuple (structure).

@@ -9,6 +9,7 @@ var CsvFileReader = /** @class */ (function () {
     function CsvFileReader(filename) {
         this.filename = filename;
         // Initiliaze data as two dimensional data of strings
+        // Note: We only use 1x brackets as MatchData[] here since Tuple MatchData is already an array
         this.data = [];
     }
     ;
@@ -25,6 +26,7 @@ var CsvFileReader = /** @class */ (function () {
             return row.split(',');
         })
             // Map through row of strings from football.csv
+            // Return an array with Date, string, number or enum MatchResult
             .map(function (row) {
             return [
                 // Take the first element of each row and return

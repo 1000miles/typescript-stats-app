@@ -4,7 +4,9 @@ import { MatchResult } from './MatchResult';
 const reader = new CsvFileReader('football.csv');
 reader.read();
 
-console.log(reader.data);
+//console.log(reader.data[0]);
+
+const dataOfFirstMatch = reader.data[0];
 
 // const printMatchResult = (): MatchResult => {
 //   if (match[5] === 'H') {

@@ -1,5 +1,6 @@
 import fs from "fs";
 import { dateStringToDate } from './utils';
+import { MatchResult } from './MatchResult';
 
 export class CsvFileReader {
   // Initiliaze data as two dimensional data of strings
@@ -19,6 +20,7 @@ export class CsvFileReader {
         // Split each row at ',' and return
         return row.split(',');
       })
+      // Map through row of strings from football.csv
       .map((row: string[]): any => {
         return [
           // Take the first element of each row and return
@@ -26,8 +28,11 @@ export class CsvFileReader {
           row[1], // Example: 'Man United'
           row[2], // Example: 'Leicester'
           parseInt(row[3]), // Example: '2'
-          parseInt(row[4]) // Example: '1'
+          parseInt(row[4]), // Example: '1'
           // Convert string into matchable enum
+          // MatchResult => Overwrite with Type Assertion
+          row[5] as MatchResult, // 'H', 'A', 'D'
+          row[6]
         ]
       })
   }

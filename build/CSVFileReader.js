@@ -24,6 +24,7 @@ var CsvFileReader = /** @class */ (function () {
             // Split each row at ',' and return
             return row.split(',');
         })
+            // Map through row of strings from football.csv
             .map(function (row) {
             return [
                 // Take the first element of each row and return
@@ -31,8 +32,11 @@ var CsvFileReader = /** @class */ (function () {
                 row[1],
                 row[2],
                 parseInt(row[3]),
-                parseInt(row[4]) // Example: '1'
+                parseInt(row[4]),
                 // Convert string into matchable enum
+                // MatchResult => Overwrite with Type Assertion
+                row[5],
+                row[6]
             ];
         });
     };

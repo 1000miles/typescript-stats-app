@@ -13,7 +13,7 @@ var CsvFileReader = /** @class */ (function () {
     }
     ;
     CsvFileReader.prototype.read = function () {
-        console.log(this.data);
+        //console.log(this.data);
         this.data = fs_1.default
             .readFileSync(this.filename, {
             encoding: 'utf-8'
@@ -21,11 +21,11 @@ var CsvFileReader = /** @class */ (function () {
             .split('\n') // Split the string after new line
             // Map through row of strings and return an array of strings
             .map(function (row) {
-            // Split each row at ',' and return
-            return row.split(',');
+            return row.split(','); /* Split each row at ',' and return*/
         })
             // Map through row of strings from football.csv
             // Return an array with Date, string, number or enum MatchResult
+            // !FIXME: TypeError: undefined is not a function
             .map(this.mapRow); // Just passing function name, no function invokation
     };
     return CsvFileReader;

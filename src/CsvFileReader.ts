@@ -1,16 +1,4 @@
 import fs from "fs";
-import { MatchResult } from './MatchResult';
-
-// Tuple
-type MatchData = [
-  Date,
-  string,
-  string,
-  number,
-  number,
-  MatchResult,
-  string
-]
 
 export abstract class CsvFileReader<T> {
   // Initiliaze data as two dimensional data of strings
@@ -23,7 +11,7 @@ export abstract class CsvFileReader<T> {
   abstract mapRow(row: string[]): T;
 
   read(): void {
-    console.log(this.data);
+    //console.log(this.data);
     this.data = fs
       .readFileSync(this.filename, {
         encoding: 'utf-8'
@@ -32,12 +20,12 @@ export abstract class CsvFileReader<T> {
       // Map through row of strings and return an array of strings
       .map(
         (row: string): string[] => {
-          // Split each row at ',' and return
-          return row.split(',');
+          return row.split(','); /* Split each row at ',' and return*/
         }
       )
       // Map through row of strings from football.csv
       // Return an array with Date, string, number or enum MatchResult
+      // !FIXME: TypeError: undefined is not a function
       .map(this.mapRow) // Just passing function name, no function invokation
   }
 }

@@ -29,3 +29,6 @@
 7. Inheritance vs. Composition
   - Inheritance: Characterized by an 'is a' relationship between two classes.
   - Composition: Characterized by a 'has a' relationship between two classes.
+
+8. Keyword static with function
+  - does not require to create a new instance of a class

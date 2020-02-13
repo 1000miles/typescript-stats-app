@@ -8,4 +8,4 @@ var csvFileReader = new CsvFileReader_1.CsvFileReader('football.csv');
 // the 'DataReader' interface
 var matchReader = new MatchReader_1.MatchReader(csvFileReader);
 matchReader.load();
-console.log(matchReader);
+//console.log(matchReader);

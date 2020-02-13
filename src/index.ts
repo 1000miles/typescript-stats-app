@@ -9,4 +9,4 @@ const csvFileReader = new CsvFileReader('football.csv');
 const matchReader = new MatchReader(csvFileReader);
 matchReader.load();
 
-console.log(matchReader)
+//console.log(matchReader);
